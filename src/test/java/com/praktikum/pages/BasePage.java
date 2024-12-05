@@ -13,6 +13,7 @@ public abstract class BasePage {
     public BasePage() {
         PageFactory.initElements(Driver.get(), this);
     }
+
     @FindBy(xpath = "//img[@alt='EN' and contains(@src, '/images/flags/us.png')]")
     public WebElement englishIcon;
 
