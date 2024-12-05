@@ -10,8 +10,8 @@ Feature: Register Functionality
     When The user enters valid information "<gender>","<firstName>","<lastName>","<day>","<month>","<year>","<email>","<companyName>","<password>" and "<confirmPassword>"
     Then The user should see the message "Your registration completed"
     Examples:
-      | gender | firstName | lastName | day | month    | year | email          | companyName | password  | confirmPassword |
-      | male   | John      | Angel    | 1   | February | 2012 | j.al@gmail.com | google      | qwerty123 | qwerty123       |
+      | gender | firstName | lastName | day | month    | year | email             | companyName | password  | confirmPassword |
+      | male   | John      | Angel    | 1   | February | 2012 | j.angel@gmail.com | google      | qwerty123 | qwerty123       |
 
   @SDT1EPR-75
   Scenario Outline: User can receive an error message when registering with an existing email.
@@ -30,6 +30,7 @@ Feature: Register Functionality
       | Email           |
       | Password        |
       | ConfirmPassword |
+
 
   @SDT1EPR-53
   Scenario Outline: Entering a space in the Password and Confirm Password fields
@@ -58,9 +59,6 @@ Feature: Register Functionality
     Examples:
       | gender | firstName | lastName | day | month    | year | email          | companyName | password  | confirmPassword |
       | male   | John      | Angel    | 1   | February | 2012 | j.al@gmail.com | google      | qwerty123 | 123             |
-
-
-
 
 
 

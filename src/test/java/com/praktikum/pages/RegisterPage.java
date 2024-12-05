@@ -5,10 +5,9 @@ import com.praktikum.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
 import java.util.List;
 
@@ -32,6 +31,7 @@ public class RegisterPage extends BasePage {
     public WebElement accountCreatedMessage;
     @FindBy(css = "[class='alert alert-primary alert alert-danger validation-summary-errors']")
     public WebElement existingMessage;
+  
     WebDriverWait wait = new WebDriverWait(Driver.get(), Duration.ofSeconds(10));
 
     public void register(String gender, String firstName, String lastName, String day, String month, String year,
@@ -67,9 +67,10 @@ public class RegisterPage extends BasePage {
     public void requiredMessagesIsDisplayed(List<String> message){
         for (String m : message) {
             WebElement requiredMsg = Driver.get().findElement(By.id(""+m+"-error"));
-            BrowserUtils.waitFor(2);
             requiredMsg.isDisplayed();
-            System.out.println("requiredMsg = " + requiredMsg);
+        }
+           BrowserUtils.waitFor(2);
+            requiredMsg.isDisplayed();
         }
     }
 

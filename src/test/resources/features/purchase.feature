@@ -1,8 +1,6 @@
-@SDT1EPR-14
+@SDT1EPR-14        
 Feature: Purchase Function
   As a user  I should be able to complete the purchase with selected product
-
-
 
   @SDT1EPR-84
   Scenario Outline: Verify that the user can add a product to the cart
@@ -101,8 +99,6 @@ Feature: Purchase Function
       | Bleaching       | Muller After Bleaching Care | 5        | The product has been added to your shopping cart | Muller After Bleaching Care | 5                | 0.00 €        | Maya       | Paul      | maya@gmail.com | Frankfurt | neue strasse | 48002 | 17654645346 | Address    | Street address is required    |
       | Bleaching       | Muller After Bleaching Care | 5        | The product has been added to your shopping cart | Muller After Bleaching Care | 5                | 0.00 €        | Maya       | Paul      | maya@gmail.com | Frankfurt | neue strasse | 48002 | 17654645346 | Zip        | Zip / postal code is required |
       | Bleaching       | Muller After Bleaching Care | 5        | The product has been added to your shopping cart | Muller After Bleaching Care | 5                | 0.00 €        | Maya       | Paul      | maya@gmail.com | Frankfurt | neue strasse | 48002 | 17654645346 | Phone      | Phone is required             |
-
-
 
 
 
