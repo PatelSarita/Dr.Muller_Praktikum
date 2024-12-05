@@ -13,11 +13,13 @@ public abstract class BasePage {
     public BasePage() {
         PageFactory.initElements(Driver.get(), this);
     }
+
     @FindBy(xpath = "//img[@alt='EN' and contains(@src, '/images/flags/us.png')]")
     public WebElement englishIcon;
 
-
-
+   // @FindBy(xpath = "//div[text()='Account']")
+    @FindBy (xpath = "(//a[text()='My account'])[1]")
+    public WebElement myAccountIcon;
 
 
     /**
@@ -31,18 +33,16 @@ public abstract class BasePage {
      * 6- My account = 'My account'
      * 7- Contact us = 'Contact us'
      */
-    public WebElement titleMenu(String menuName){
-        WebElement title = Driver.get().findElement(By.xpath("//a[text()='"+menuName+"']"));
+    public WebElement titleMenu(String menuName) {
+        WebElement title = Driver.get().findElement(By.xpath("//a[text()='" + menuName + "']"));
         return title;
     }
 
-    public void navigateToWebSite(){
+    public void navigateToWebSite() {
         Driver.get().get(ConfigurationReader.get("url"));
         BrowserUtils.waitFor(3);
         englishIcon.click();
     }
-
-
 
 
 }

@@ -1,11 +1,12 @@
 package com.praktikum.pages;
 
+import com.praktikum.pages.BasePage;
 import com.praktikum.utilities.BrowserUtils;
 import com.praktikum.utilities.ConfigurationReader;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class LoginPage extends BasePage{
+public class LoginPage extends BasePage {
     @FindBy(id = "Email")
     public WebElement emailInput;
     @FindBy(id = "Password")
@@ -17,14 +18,14 @@ public class LoginPage extends BasePage{
 
 
     public void login(){
+        BrowserUtils.waitFor(2);
         emailInput.sendKeys(ConfigurationReader.get("email"));
         BrowserUtils.waitFor(2);
         passwordInput.sendKeys(ConfigurationReader.get("password"));
         BrowserUtils.waitFor(2);
         loginBtn.click();
         BrowserUtils.waitFor(2);
-      // titleMenu("Home page").click();
-
+        //titleMenu("Home page").click();
     }
 
 
