@@ -1,4 +1,4 @@
-@update
+@SDT1EPR-12
 Feature: My Account-Customer Info Functionality
   As a user I should change some info in My Account-Customer Info Functionality
 
@@ -6,6 +6,8 @@ Feature: My Account-Customer Info Functionality
     Given The user navigates to the "My account" on the website
     When The user enters valid credentials
 
+
+  @SDT1EPR-129
   Scenario Outline: User can update their account information.
     When The user enters valid information "<gender>","<firstName>","<lastName>","<day>","<month>","<year>","<email>","<companyName>"
     Then And the updated "<firstName>" should reflect the new values in the Customer Info section
@@ -17,6 +19,7 @@ Feature: My Account-Customer Info Functionality
       | male   | Murat     | Kocer    | 10  | February | 2001 | murat3@gmail.com | nimet       |
       | female | Emine     | Kocer    | 10  | February | 2001 | emine3@gmail.de  | nimet       |
 
+  @SDT1EPR-130
   Scenario: Verify error messages for missing required fields
 
     When The user leaves the firstName field empty
@@ -28,6 +31,8 @@ Feature: My Account-Customer Info Functionality
     And The user leaves the email field empty
     Then The error message for Email "Email is required." should be displayed
 
+
+  @SDT1EPR-131
   Scenario Outline: Display error message for invalid email
 
     When The user enters valid information "<gender>","<firstName>","<lastName>","<day>","<month>","<year>","<email>","<companyName>"
@@ -38,7 +43,7 @@ Feature: My Account-Customer Info Functionality
       | male   | Murat     | Kocer    | 10  | February | 2001 | murat3gmail.com | nimet       |
       | female | Emine     | Kocer    | 10  | February | 2001 | emine3@.com     | nimet       |
 
-
+  @SDT1EPR-132
   Scenario Outline: User can not choose  invalid date
 
     When The user enters valid information "<gender>","<firstName>","<lastName>","<day>","<month>","<year>","<email>","<companyName>"
