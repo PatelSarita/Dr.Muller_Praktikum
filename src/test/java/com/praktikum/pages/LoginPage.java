@@ -17,7 +17,7 @@ public class LoginPage extends BasePage {
     public WebElement registerBtn;
 
 
-    public void login(){
+    public void login() {
         BrowserUtils.waitFor(2);
         emailInput.sendKeys(ConfigurationReader.get("email"));
         BrowserUtils.waitFor(2);
@@ -27,7 +27,6 @@ public class LoginPage extends BasePage {
         BrowserUtils.waitFor(2);
         //titleMenu("Home page").click();
     }
-
 
 
 }

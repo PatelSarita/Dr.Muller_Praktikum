@@ -7,11 +7,13 @@ public class Login_stepDefs extends Base_stepDefs{
 
     @Given("The user navigates to the {string} on the website")
     public void theUserNavigatesToTheOnTheWebsite(String menuName) {
+
         loginPage.titleMenu(menuName).click();
     }
 
     @When("The user enters valid credentials")
     public void theUserEntersValidCredentials() {
+
         loginPage.login();
     }
 }
