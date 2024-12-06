@@ -27,6 +27,7 @@ public class Password_stepDefs extends Base_stepDefs{
 
 
     @When("The user enters valid {string} and {string} and {string}")
-    public void theUserEntersValidAndAnd(String arg0, String arg1, String arg2) {
+    public void theUserEntersValidAndAnd(String OldPassword, String NewPassword, String ConfirmNewPassword) {
+
     }
 }
