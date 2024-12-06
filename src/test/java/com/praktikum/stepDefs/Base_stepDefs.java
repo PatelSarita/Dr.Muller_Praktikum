@@ -1,7 +1,6 @@
 package com.praktikum.stepDefs;
 
-import com.praktikum.pages.CustomerPage;
-import com.praktikum.pages.LoginPage;
+import com.praktikum.pages.*;
 
 public abstract class Base_stepDefs {
     LoginPage loginPage = new LoginPage();
@@ -10,4 +9,5 @@ public abstract class Base_stepDefs {
     ShoppingCartPage shoppingCartPage = new ShoppingCartPage();
     CheckoutPage checkoutPage=new CheckoutPage();
     RegisterPage registerPage = new RegisterPage();
+    AddressPage addressPage=new AddressPage();
 }

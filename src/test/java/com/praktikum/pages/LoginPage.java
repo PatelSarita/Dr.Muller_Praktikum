@@ -1,6 +1,5 @@
 package com.praktikum.pages;
 
-import com.praktikum.pages.BasePage;
 import com.praktikum.utilities.BrowserUtils;
 import com.praktikum.utilities.ConfigurationReader;
 import org.openqa.selenium.WebElement;
@@ -25,9 +24,5 @@ public class LoginPage extends BasePage {
         BrowserUtils.waitFor(2);
         loginBtn.click();
         BrowserUtils.waitFor(2);
-        //titleMenu("Home page").click();
     }
-
-
-
 }
