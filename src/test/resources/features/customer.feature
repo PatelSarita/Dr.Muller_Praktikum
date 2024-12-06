@@ -20,13 +20,13 @@ Feature: My Account-Customer Info Functionality
   Scenario: Verify error messages for missing required fields
 
     When The user leaves the firstName field empty
-    Then The error message for First Name "First name is required" should be displayed
+    Then The error message for First Name "First name is required." should be displayed
 
     And The user leaves the lastName field empty
-    Then The error message for Last Name "Last name is required" should be displayed
+    Then The error message for Last Name "Last name is required." should be displayed
 
     And The user leaves the email field empty
-    Then The error message for Email "Email is required" should be displayed
+    Then The error message for Email "Email is required." should be displayed
 
   Scenario Outline: Display error message for invalid email
 
