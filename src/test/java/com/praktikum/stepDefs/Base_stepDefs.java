@@ -10,4 +10,5 @@ public abstract class Base_stepDefs {
     CheckoutPage checkoutPage=new CheckoutPage();
     RegisterPage registerPage = new RegisterPage();
     PasswordPage passwordPage=new PasswordPage();
+    AddressPage addressPage=new AddressPage();
 }

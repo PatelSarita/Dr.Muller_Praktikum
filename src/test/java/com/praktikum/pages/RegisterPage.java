@@ -5,8 +5,8 @@ import com.praktikum.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
@@ -31,7 +31,6 @@ public class RegisterPage extends BasePage {
     public WebElement accountCreatedMessage;
     @FindBy(css = "[class='alert alert-primary alert alert-danger validation-summary-errors']")
     public WebElement existingMessage;
-  
     WebDriverWait wait = new WebDriverWait(Driver.get(), Duration.ofSeconds(10));
 
     public void register(String gender, String firstName, String lastName, String day, String month, String year,
@@ -64,25 +63,11 @@ public class RegisterPage extends BasePage {
         selectYear.selectByVisibleText(year);
     }
 
-    public void requiredMessagesIsDisplayed(List<String> message){
+    public void requiredMessagesIsDisplayed(List<String> message) {
         for (String m : message) {
             WebElement requiredMsg = Driver.get().findElement(By.id(""+m+"-error"));
-            requiredMsg.isDisplayed();
-
-           BrowserUtils.waitFor(2);
-            requiredMsg.isDisplayed();
+            BrowserUtils.verifyElementDisplayed(requiredMsg);
         }
-    }
-
-    public void enterPasswordWithSpaces(String firstName, String lastName, String email){
-        wait.until(ExpectedConditions.visibilityOf(firstNameInput)).sendKeys(firstName);
-        wait.until(ExpectedConditions.visibilityOf(lastNameInput)).sendKeys(lastName);
-        wait.until(ExpectedConditions.visibilityOf(emailInput)).sendKeys(email);
-        passwordInput.sendKeys("       ");
-        confirmPasswordInput.sendKeys("       ");
-        wait.until(ExpectedConditions.elementToBeClickable(registerBtn)).click();
-
-    }
-
+    }           
 }
 
