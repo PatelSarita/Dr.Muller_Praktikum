@@ -37,8 +37,8 @@ public class PasswordPage extends BasePage {
 
     @FindBy(xpath = "//*[text()='Password was changed']")
     public WebElement validMsg;
-    @FindBy(xpath = "//div[@class='message-error alert alert-danger validation-summary-errors']")
-    public WebElement ErrorOldMsg;
+//    @FindBy(xpath = "//div[@class='message-error alert alert-danger validation-summary-errors']")
+//    public WebElement ErrorOldMsg;
 
 
     public void validChangePassword(String newPassword, String confirmNewPassword) {
