@@ -15,6 +15,8 @@ public class LoginPage extends BasePage {
     public WebElement loginBtn;
     @FindBy(css = "[class='btn btn-success col-12']")
     public WebElement registerBtn;
+    @FindBy(tagName = "h1")
+    public WebElement customerInfo;
 
 
     public void login(){
