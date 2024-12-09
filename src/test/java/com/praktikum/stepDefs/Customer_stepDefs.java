@@ -2,6 +2,7 @@ package com.praktikum.stepDefs;
 
 
 import com.praktikum.utilities.Driver;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
@@ -81,10 +82,6 @@ public class Customer_stepDefs extends Base_stepDefs {
         Select selectDay = new Select(dayDropdown);
         selectDay.selectByVisibleText(day);
     }
-
-
-
-
 
 
 
