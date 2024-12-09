@@ -68,10 +68,11 @@ public class RegisterPage extends BasePage {
         for (String m : message) {
             WebElement requiredMsg = Driver.get().findElement(By.id("" + m + "-error"));
             requiredMsg.isDisplayed();
-
-        BrowserUtils.waitFor(2);
-        requiredMsg.isDisplayed();
+            BrowserUtils.waitFor(2);
+            requiredMsg.isDisplayed();
     }
+
+        }
     }
 
     public void enterPasswordWithSpaces(String firstName, String lastName, String email){
