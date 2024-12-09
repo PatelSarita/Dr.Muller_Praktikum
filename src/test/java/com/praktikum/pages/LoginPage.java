@@ -1,6 +1,5 @@
 package com.praktikum.pages;
 
-import com.praktikum.pages.BasePage;
 import com.praktikum.utilities.BrowserUtils;
 import com.praktikum.utilities.ConfigurationReader;
 import com.praktikum.utilities.Driver;
@@ -22,20 +21,9 @@ public class LoginPage extends BasePage {
     public WebElement registerBtn;
 
 
-    public void login(){
-        BrowserUtils.waitFor(2);
-        emailInput.sendKeys(ConfigurationReader.get("email"));
-        BrowserUtils.waitFor(2);
-        passwordInput.sendKeys(ConfigurationReader.get("password"));
-        BrowserUtils.waitFor(2);
-        loginBtn.click();
-        BrowserUtils.waitFor(2);
-        //titleMenu("Home page").click();
-    }
-
     WebDriverWait wait = new WebDriverWait(Driver.get(), Duration.ofSeconds(10));
 
-   /* public void login() {
+        public void login() {
         WebElement emailElement = wait.until(ExpectedConditions.visibilityOf(emailInput));
         emailElement.clear();
         emailElement.sendKeys(ConfigurationReader.get("email"));
@@ -46,6 +34,6 @@ public class LoginPage extends BasePage {
 
         WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
         loginButton.click();
-    }*/
+    }
 
 }

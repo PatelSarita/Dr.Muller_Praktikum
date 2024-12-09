@@ -1,5 +1,8 @@
 package com.praktikum.pages;
 
+public class CustomerPage extends BasePage {
+
+
 import com.praktikum.utilities.BrowserUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -32,6 +35,7 @@ public class CustomerPage extends BasePage {
     @FindBy(id = "Email-error")
     public WebElement emailErrorMsg;
     RegisterPage registerPage = new RegisterPage();
+  
     public void updateCustomerInformation(String gender, String firstName, String lastName, String day, String month, String year,
                                           String email, String companyName) {
         BrowserUtils.waitFor(2);

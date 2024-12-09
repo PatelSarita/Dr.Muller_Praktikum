@@ -64,12 +64,14 @@ public class RegisterPage extends BasePage {
         selectYear.selectByVisibleText(year);
     }
 
-    public void requiredMessagesIsDisplayed(List<String> message){
+    public void requiredMessagesIsDisplayed(List<String> message) {
         for (String m : message) {
-            WebElement requiredMsg = Driver.get().findElement(By.id(""+m+"-error"));
+            WebElement requiredMsg = Driver.get().findElement(By.id("" + m + "-error"));
             requiredMsg.isDisplayed();
             BrowserUtils.waitFor(2);
             requiredMsg.isDisplayed();
+    }
+
         }
     }
 
