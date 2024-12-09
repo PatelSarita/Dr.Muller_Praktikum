@@ -12,7 +12,7 @@ Feature: Add and Update Address Information
     Then The user should be able to save
     Examples:
       | firstName | lastName | email         | companyName | country | state  | city      | address1    | address2 | zip   | phoneNumber | faxNumber |
-      | Edel      | Kastrat  | edel@gmail.de | eurutech    | Germany | Hessen | Wiesbaden | zoll strase | numer 1  | 42343 | 0173456765  | 785634    |
+      | Edel      | Kastrati  | edel@gmail.de | eurutech    | Germany | Hessen | Wiesbaden | zoll strase | numer 1  | 42343 | 0173456765  | 785634    |
 
 
   @SDT1EPR-136
