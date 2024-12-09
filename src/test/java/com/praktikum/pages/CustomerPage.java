@@ -1,17 +1,13 @@
 package com.praktikum.pages;
 
-import com.praktikum.pages.BasePage;
+public class CustomerPage extends BasePage {
+
+
 import com.praktikum.utilities.BrowserUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-
-
-
 public class CustomerPage extends BasePage {
-    //@FindBy(xpath = "(//a[@class='nav-link-style d-flex align-items-center px-3 py-2'])[1]")
-    //@FindBy(xpath = "//a[text()='Customer info']")
-    //  @FindBy(xpath = "(//a[@class='nav-link-style d-flex align-items-center px-3 py-2'])[1]")
     @FindBy(css = "[class='border-bottom mb-0 customer-info active']")
     public WebElement customerInfo;
     @FindBy(css = "[class='ml-5 female']")
@@ -38,16 +34,11 @@ public class CustomerPage extends BasePage {
     public WebElement emailWrongMsg;
     @FindBy(id = "Email-error")
     public WebElement emailErrorMsg;
-
-
     RegisterPage registerPage = new RegisterPage();
-
+  
     public void updateCustomerInformation(String gender, String firstName, String lastName, String day, String month, String year,
                                           String email, String companyName) {
         BrowserUtils.waitFor(2);
-        // customerInfo.click();
-        // WebElement genderRadioBtn = Driver.get().findElement(By.cssSelector("label[for='gender-" + gender + "']"));
-        //genderRadioBtn.click();
         if (gender.equals("female")) {
             genderFemale.click();
         } else {
@@ -71,5 +62,4 @@ public class CustomerPage extends BasePage {
         saveButton.click();
         BrowserUtils.waitFor(2);
     }
-
 }

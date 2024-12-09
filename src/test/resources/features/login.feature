@@ -1,4 +1,4 @@
-@Login
+@Login @SDT1EPR-1
 Feature: Login Functionality
 
   #This code may not work due to captcha problem
