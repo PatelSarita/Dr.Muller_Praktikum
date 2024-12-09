@@ -3,8 +3,13 @@ package com.praktikum.pages;
 import com.praktikum.pages.BasePage;
 import com.praktikum.utilities.BrowserUtils;
 import com.praktikum.utilities.ConfigurationReader;
+import com.praktikum.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class LoginPage extends BasePage {
     @FindBy(id = "Email")
@@ -28,6 +33,19 @@ public class LoginPage extends BasePage {
         //titleMenu("Home page").click();
     }
 
+    WebDriverWait wait = new WebDriverWait(Driver.get(), Duration.ofSeconds(10));
 
+   /* public void login() {
+        WebElement emailElement = wait.until(ExpectedConditions.visibilityOf(emailInput));
+        emailElement.clear();
+        emailElement.sendKeys(ConfigurationReader.get("email"));
+
+        WebElement passwordElement = wait.until(ExpectedConditions.visibilityOf(passwordInput));
+        passwordElement.clear();
+        passwordElement.sendKeys(ConfigurationReader.get("password"));
+
+        WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
+        loginButton.click();
+    }*/
 
 }

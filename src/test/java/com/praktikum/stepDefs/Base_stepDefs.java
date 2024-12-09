@@ -1,6 +1,6 @@
 package com.praktikum.stepDefs;
 
-import com.praktikum.pages.CustomerPage;
+import com.praktikum.pages.*;
 import com.praktikum.pages.LoginPage;
 
 public abstract class Base_stepDefs {
