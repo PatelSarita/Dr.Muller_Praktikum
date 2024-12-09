@@ -2,6 +2,7 @@ package com.praktikum.stepDefs;
 
 import com.praktikum.utilities.BrowserUtils;
 import com.praktikum.utilities.Driver;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -68,7 +69,6 @@ public class Customer_stepDefs extends Base_stepDefs {
         Assert.assertNotEquals(day, dayValue);
         }
     }
-
 
 
 
