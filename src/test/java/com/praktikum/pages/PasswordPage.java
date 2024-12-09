@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -25,21 +24,14 @@ public class PasswordPage extends BasePage {
     public WebElement CnfNewPassInput;
     @FindBy(css = "[id='OldPassword-error']")
     public WebElement oldPasswordError;
-
     @FindBy(css = "[id='NewPassword-error']")
     public WebElement newPasswordError;
-
     @FindBy(css = "[id='ConfirmNewPassword-error']")
     public WebElement confPasswordError;
-
     @FindBy(css = "[class='btn btn-primary col-12 col-md-4']")
     public WebElement ChnPasswordBtn;
-
     @FindBy(xpath = "//*[text()='Password was changed']")
     public WebElement validMsg;
-//    @FindBy(xpath = "//div[@class='message-error alert alert-danger validation-summary-errors']")
-//    public WebElement ErrorOldMsg;
-
 
     public void validChangePassword(String newPassword, String confirmNewPassword) {
         BrowserUtils.waitFor(2);
