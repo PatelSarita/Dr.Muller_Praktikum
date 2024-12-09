@@ -1,8 +1,5 @@
 package com.praktikum.pages;
 
-public class CustomerPage extends BasePage {
-
-
 import com.praktikum.utilities.BrowserUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
