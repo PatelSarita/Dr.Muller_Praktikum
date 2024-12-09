@@ -66,24 +66,13 @@ public class RegisterPage extends BasePage {
 
     public void requiredMessagesIsDisplayed(List<String> message) {
         for (String m : message) {
+            WebElement requiredMsg = Driver.get().findElement(By.id(""+m+"-error"));
+            BrowserUtils.verifyElementDisplayed(requiredMsg);
             WebElement requiredMsg = Driver.get().findElement(By.id("" + m + "-error"));
             requiredMsg.isDisplayed();
             BrowserUtils.waitFor(2);
             requiredMsg.isDisplayed();
     }
-
         }
-    }
-
-    public void enterPasswordWithSpaces(String firstName, String lastName, String email){
-        wait.until(ExpectedConditions.visibilityOf(firstNameInput)).sendKeys(firstName);
-        wait.until(ExpectedConditions.visibilityOf(lastNameInput)).sendKeys(lastName);
-        wait.until(ExpectedConditions.visibilityOf(emailInput)).sendKeys(email);
-        passwordInput.sendKeys("       ");
-        confirmPasswordInput.sendKeys("       ");
-        wait.until(ExpectedConditions.elementToBeClickable(registerBtn)).click();
-
-    }
-
 }
 
